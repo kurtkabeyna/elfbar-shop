@@ -7,7 +7,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 
 const Container = styled.div`
-height: 60px;
+height: 100px;
 
 
 `
@@ -15,6 +15,7 @@ const MenuItem = styled.div`
 font-style: 14px;
 cursor:pointer;
 margin-left: 25px;
+margin-bottom: 65px;
 `
 
 const Wrapper = styled.div`
@@ -25,7 +26,8 @@ const Wrapper = styled.div`
 `
 const Language = styled.span`
     font-size: 14px;
-    cursor: pointer;        
+    cursor: pointer;       
+    margin-bottom: 65px; 
 `
 const SearchContainer = styled.div`
  border:0.5px solid lightslategray;
@@ -34,6 +36,7 @@ const SearchContainer = styled.div`
  display: flex;
  align-items: center;
  font-size: 15px;
+ margin-bottom: 65px;
 `
 const Input = styled.input`
 border:2px;
@@ -47,11 +50,13 @@ align-items: center;
 const Center = styled.div`
 flex: 1;
 text-align: center;
+
 `;
 
 const Logo = styled.img`
-   height: 100px;
-   width: 100px;
+   height: 85px;
+   width: 94px;
+
    `;
 const Right = styled.div`
 flex: 1;
@@ -63,6 +68,7 @@ justify-content: flex-end;
 const Navbar = () => {
     return (
         <Container>
+
             <Wrapper>
                 <Left>
                     <Language>EN</Language>
@@ -73,7 +79,7 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
                 <Center>
-                    <Logo style={{ margin: 10 }} src="https://media.discordapp.net/attachments/980063993773314088/1135981366530560151/logo.png" />
+                    <Logo src="https://media.discordapp.net/attachments/980063993773314088/1135981366530560151/logo.png" />
                 </Center>
                 <Right>
                     <MenuItem>Sign In</MenuItem>

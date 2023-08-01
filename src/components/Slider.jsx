@@ -1,8 +1,9 @@
 import styled from 'styled-components'
-import React from 'react'
+import React, { useState } from 'react'
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
-import { lightBlue } from '@mui/material/colors';
+import { sliderItems } from "../data.js"
+
 
 const Container = styled.div`
 width: 100%;
@@ -28,12 +29,13 @@ right: ${props => props.direction === "right" && "10px"};
 margin: auto;
 cursor: pointer;
 opacity: 0.5;
-
+z-index: 2;
 `
 
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
+    transform: translateX(-100vw);
 
 `
 const Slide = styled.div`
@@ -75,60 +77,37 @@ background-color: transparent;
 cursor: pointer;
 `;
 const Slider = () => {
+    const handleClick = (direction) => {
+        const [slideIndex, setSlideIndex] = useState(0);
+    };
     return (
         <div>
             <Container>
-                <Arrow direction="left">
+                <Arrow direction="left" onClick={() => handleClick("left")}>
                     <ArrowLeftOutlinedIcon />
                 </Arrow>
                 <Wrapper>
-                    <Slide bg="#f5fafd">
-                        <ImageContainer>
-                            <Image src="https://media.discordapp.net/attachments/980063993773314088/1135987221359501383/banner1.png?width=701&height=701" />
-                        </ImageContainer>
-                        <InfoContainer>
-                            <Title>SUMMER SALE</Title>
-                            <Description>GET FLAT 10% OFF FOR NEW ELF-BAR</Description>
-                            <Button>SHOW NOW</Button>
-                        </InfoContainer>
-                    </Slide>
-                    <Slide bg="#fcf1ed">
-                        <ImageContainer>
-                            <Image src="https://media.discordapp.net/attachments/980063993773314088/1135987221359501383/banner1.png?width=701&height=701" />
-                        </ImageContainer>
-                        <InfoContainer>
-                            <Title>NEW</Title>
-                            <Description>TRY NEW TASTES</Description>
-                            <Button>SHOW NOW</Button>
-                        </InfoContainer>
-                    </Slide>
-                    <Slide bg="#fcf1ed">
-                        <ImageContainer>
-                            <Image src="https://cdn.discordapp.com/attachments/980063993773314088/1135990309784924160/ELF-BAR-BC5000.png" />
-                        </ImageContainer>
-                        <InfoContainer>
-                            <Title>ELF BAR BC5000</Title>
-                            <Description>GET FLAT 10% OFF FOR NEW ELF-BAR</Description>
-                            <Button>SHOW NOW</Button>
-                        </InfoContainer>
-                    </Slide>
-                    <Slide bg="#fcf1ed">
-                        <ImageContainer>
-                            <Image src="https://media.discordapp.net/attachments/980063993773314088/1135987221359501383/banner1.png?width=701&height=701" />
-                        </ImageContainer>
-                        <InfoContainer>
-                            <Title>SUMMER SALE</Title>
-                            <Description>GET FLAT 10% OFF FOR NEW ELF-BAR</Description>
-                            <Button>SHOW NOW</Button>
-                        </InfoContainer>
-                    </Slide>
+                    {sliderItems.map(item => (
+
+
+                        <Slide bg={item.bg}>
+                            <ImageContainer>
+                                <Image src={item.img} />
+                            </ImageContainer>
+                            <InfoContainer>
+                                <Title>{item.title}</Title>
+                                <Description>{item.desc}</Description>
+                                <Button>SHOW NOW</Button>
+                            </InfoContainer>
+                        </Slide>
+                    ))}
                 </Wrapper>
-                <Arrow direction="right">
+                <Arrow direction="right" onClick={() => handleClick("right")}>
                     <ArrowRightOutlinedIcon />
                 </Arrow>
 
             </Container>
-        </div>
+        </div >
     )
 }
 
