@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import React, { useState } from 'react'
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
-import { sliderItems } from "../data.js"
+import { sliderItems } from '../src/data';
 
 
 const Container = styled.div`

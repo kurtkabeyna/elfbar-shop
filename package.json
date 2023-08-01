@@ -1,4 +1,7 @@
 {
+  "terminal.integrated.env.windows": {
+    "PYTHONPATH": "${workspaceFolder};"
+  },
   "name": "fox-elfbar",
   "version": "0.1.0",
   "private": true,
