@@ -9,6 +9,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 const Container = styled.div`
 height: 60px;
 
+
 `
 const MenuItem = styled.div`
 font-style: 14px;
@@ -51,7 +52,7 @@ text-align: center;
 const Logo = styled.img`
    height: 100px;
    width: 100px;
-`;
+   `;
 const Right = styled.div`
 flex: 1;
 display: flex;
@@ -72,7 +73,7 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
                 <Center>
-                    <Logo src="https://media.discordapp.net/attachments/980063993773314088/1135981366530560151/logo.png" />
+                    <Logo style={{ margin: 10 }} src="https://media.discordapp.net/attachments/980063993773314088/1135981366530560151/logo.png" />
                 </Center>
                 <Right>
                     <MenuItem>Sign In</MenuItem>
