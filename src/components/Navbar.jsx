@@ -17,6 +17,18 @@ cursor:pointer;
 margin-left: 25px;
 margin-bottom: 65px;
 `
+const hr = styled.div`
+    display: block;
+    unicode-bidi: isolate;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    `
+
 
 const Wrapper = styled.div`
   align-items: center;
@@ -54,8 +66,8 @@ text-align: center;
 `;
 
 const Logo = styled.img`
-   height: 85px;
-   width: 94px;
+   height: 100px;
+   
 
    `;
 const Right = styled.div`
@@ -79,7 +91,7 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
                 <Center>
-                    <Logo src="https://media.discordapp.net/attachments/980063993773314088/1135981366530560151/logo.png" />
+                    <Logo src="https://media.discordapp.net/attachments/980063993773314088/1137074031183532146/logo_transparent.png" />
                 </Center>
                 <Right>
                     <MenuItem>Sign In</MenuItem>

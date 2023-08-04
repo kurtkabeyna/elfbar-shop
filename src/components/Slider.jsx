@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import React, { useState } from 'react'
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
-import { sliderItems } from '../src/data';
+import { sliderItems } from "../data";
 
 
 const Container = styled.div`
@@ -35,7 +35,8 @@ z-index: 2;
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
-    transform: translateX(-100vw);
+    transition: all 1.5s ease;
+    transform: translateX(${props => props.slideIndex * -100}vw);
 
 `
 const Slide = styled.div`
@@ -52,7 +53,7 @@ flex: 1;
 `;
 
 const Image = styled.img`
-    height: 490px;
+height: 480px;
 margin-left: 50px;
 `
 
@@ -74,34 +75,44 @@ const Button = styled.button`
 padding: 10px;
 font-size: 20px;
 background-color: transparent;
-cursor: pointer;
+cursor:pointer;
 `;
 const Slider = () => {
+    const [slideIndex, setSlideIndex] = useState(0);
     const handleClick = (direction) => {
-        const [slideIndex, setSlideIndex] = useState(0);
+
+        if (direction === "left") {
+            setSlideIndex(slideIndex > 0
+                ? slideIndex - 1
+                : 2);
+        } else {
+            setSlideIndex(slideIndex < 2
+                ? slideIndex + 1
+                : 0);
+        }
     };
     return (
-        <div>
+        <div> <hr />
             <Container>
                 <Arrow direction="left" onClick={() => handleClick("left")}>
                     <ArrowLeftOutlinedIcon />
                 </Arrow>
-                <Wrapper>
+                <Wrapper slideIndex={slideIndex}>
                     {sliderItems.map(item => (
-
-
-                        <Slide bg={item.bg}>
+                        <Slide bg={item.bg} key={item.id}>
                             <ImageContainer>
                                 <Image src={item.img} />
                             </ImageContainer>
                             <InfoContainer>
                                 <Title>{item.title}</Title>
                                 <Description>{item.desc}</Description>
+                                <Description style={{ color: "red", fontSize: 13 }}>{item.underdesc}</Description>
                                 <Button>SHOW NOW</Button>
                             </InfoContainer>
                         </Slide>
                     ))}
                 </Wrapper>
+
                 <Arrow direction="right" onClick={() => handleClick("right")}>
                     <ArrowRightOutlinedIcon />
                 </Arrow>
