@@ -34,7 +34,7 @@ export const sliderItems = [
 ]
 
 
-export const categories = [
+export const products = [
     {
         id: 1,
         img: "https://media.discordapp.net/attachments/980063993773314088/1137087790153211911/image.png",

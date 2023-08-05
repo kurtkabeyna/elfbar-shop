@@ -80,7 +80,7 @@ justify-content: flex-end;
 const Navbar = () => {
     return (
         <Container>
-
+{}
             <Wrapper>
                 <Left>
                     <Language>EN</Language>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { categories } from "../data";
-import CategoryItem from './CategoryItem';
+import { products } from "../data";
+import Product from './Product';
 
 
 const Container = styled.div`
@@ -13,14 +13,14 @@ justify-content: center;
 align-items: center;
 `
 
-const Categories = () => {
+const Products = () => {
     return (
         <Container>
-            {categories.map((item) => (
-                <CategoryItem item={item} key={item.id} />
+            {products.map((item) => (
+                <Product item={item} key={item.id} />
             ))}
         </Container>
     )
 }
 
-export default Categories
+export default Products;

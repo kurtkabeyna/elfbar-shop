@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { categories } from '../data'
-import Categories from './Categories'
+import { products } from '../data'
+import Products from './Products'
 
 const Container = styled.div`
 flex: 1;
@@ -36,11 +36,11 @@ cursor:pointer;
 
 `
 
-const CategoryItem = ({ item }) => {
+const Product = ({ item }) => {
     return (
         <Container>
-            {categories.map((item) => (
-                <Categories item={item} key={item.id} />
+            {products.map((item) => (
+                <Products item={item} key={item.id} />
             ))}
             <Button>
                 <Image src={item.img} />
@@ -53,4 +53,4 @@ const CategoryItem = ({ item }) => {
     )
 }
 
-export default CategoryItem
+export default Product
