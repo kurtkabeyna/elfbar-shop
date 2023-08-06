@@ -12,10 +12,11 @@ height: 100px;
 
 `
 const MenuItem = styled.div`
-font-style: 14px;
+    font-size: 20px;
 cursor:pointer;
 margin-left: 25px;
-margin-bottom: 65px;
+margin-bottom: 30px;
+margin-right: 30px;
 `
 const hr = styled.div`
     display: block;
@@ -27,6 +28,7 @@ const hr = styled.div`
     overflow: hidden;
     border-style: inset;
     border-width: 1px;
+    width: 100%;
     `
 
 
@@ -37,18 +39,21 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `
 const Language = styled.span`
-    font-size: 14px;
+    font-size: 17px;
     cursor: pointer;       
-    margin-bottom: 65px; 
+  
+    margin-bottom: 30px;
+margin-left: 15px;
 `
 const SearchContainer = styled.div`
  border:0.5px solid lightslategray;
- margin-left: 25px;
+ margin-left: 35px;
  padding: 5px;
  display: flex;
  align-items: center;
  font-size: 15px;
- margin-bottom: 65px;
+ margin-bottom: 30px;
+
 `
 const Input = styled.input`
 border:2px;
@@ -80,7 +85,7 @@ justify-content: flex-end;
 const Navbar = () => {
     return (
         <Container>
-{}
+            <hr />
             <Wrapper>
                 <Left>
                     <Language>EN</Language>

@@ -5,9 +5,10 @@ import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
 import { sliderItems } from "../data";
 
 
+
 const Container = styled.div`
 width: 100%;
-height: 100vh;
+height: 60vh;
 display: flex;
 position: relative;
 overflow: hidden;
@@ -54,20 +55,25 @@ flex: 1;
 
 const Image = styled.img`
 height: 480px;
-margin-left: 50px;
+margin-left: 200px;
+margin-bottom: 250px;
+height: 600px;
 `
 
 const InfoContainer = styled.div`
 flex: 1;
 padding: 50px;
+margin-bottom: 100px;
+margin-left: 300px;
 `;
 
 const Title = styled.h1`
 font-size: 70px;
+margin-bottom: 50px;
 `;
 const Description = styled.p`
 margin: 35px 0px;
-font-size: 20px;
+font-size: 25px;
 font-weight: 500;
 letter-spacing: 2.6px;
 `;
@@ -76,6 +82,7 @@ padding: 10px;
 font-size: 20px;
 background-color: transparent;
 cursor:pointer;
+margin-bottom: 150px;
 `;
 const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0);
@@ -92,7 +99,8 @@ const Slider = () => {
         }
     };
     return (
-        <div> <hr />
+        <div>
+            < hr />
             <Container>
                 <Arrow direction="left" onClick={() => handleClick("left")}>
                     <ArrowLeftOutlinedIcon />
@@ -106,11 +114,12 @@ const Slider = () => {
                             <InfoContainer>
                                 <Title>{item.title}</Title>
                                 <Description>{item.desc}</Description>
-                                <Description style={{ color: "red", fontSize: 13 }}>{item.underdesc}</Description>
+                                <Description style={{ color: "red", fontSize: 16 }}>{item.underdesc}</Description>
                                 <Button>SHOW NOW</Button>
                             </InfoContainer>
                         </Slide>
                     ))}
+
                 </Wrapper>
 
                 <Arrow direction="right" onClick={() => handleClick("right")}>
@@ -118,6 +127,7 @@ const Slider = () => {
                 </Arrow>
 
             </Container>
+            < hr />
         </div >
     )
 }

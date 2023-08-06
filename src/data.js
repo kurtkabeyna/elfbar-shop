@@ -19,14 +19,14 @@ export const sliderItems = [
     },
     {
         id: 3,
-        img: "https://media.discordapp.net/attachments/980063993773314088/1137054848978792468/BANNER3.PNG",
+        img: "https://cdn.discordapp.com/attachments/980063993773314088/1137403391803412631/BANNER4.2.PNG",
         title: "HALLOWEEN",
         desc: "BUY ELF AS A GIFT ON HALLOWEEN",
         bg: "fcf1ed"
     },
     {
         id: 4,
-        img: "https://media.discordapp.net/attachments/980063993773314088/1137059399089791016/BANNER4.PNG?width=702&height=702",
+        img: "https://media.discordapp.net/attachments/980063993773314088/1137403391803412631/BANNER4.2.PNG",
         title: "NEW PRODUCTS",
         desc: "TRY NEW TASTES",
         bg: "fcf1ed"
@@ -59,6 +59,36 @@ export const products = [
     },
     {
         id: 5,
+        img: "https://cdn.discordapp.com/attachments/980063993773314088/1137091008232960031/image.png",
+        title: "Одноразова Pod-система Elf Bar 1500 LUX STRAWBERRY ENERGY",
+    },
+    {
+        id: 6,
+        img: "https://cdn.discordapp.com/attachments/980063993773314088/1137091008232960031/image.png",
+        title: "Одноразова Pod-система Elf Bar 1500 LUX STRAWBERRY ENERGY",
+    },
+    {
+        id: 7,
+        img: "https://cdn.discordapp.com/attachments/980063993773314088/1137091008232960031/image.png",
+        title: "Одноразова Pod-система Elf Bar 1500 LUX STRAWBERRY ENERGY",
+    },
+    {
+        id: 8,
+        img: "https://cdn.discordapp.com/attachments/980063993773314088/1137091008232960031/image.png",
+        title: "Одноразова Pod-система Elf Bar 1500 LUX STRAWBERRY ENERGY",
+    },
+    {
+        id: 9,
+        img: "https://cdn.discordapp.com/attachments/980063993773314088/1137091008232960031/image.png",
+        title: "Одноразова Pod-система Elf Bar 1500 LUX STRAWBERRY ENERGY",
+    },
+    {
+        id: 10,
+        img: "https://cdn.discordapp.com/attachments/980063993773314088/1137091008232960031/image.png",
+        title: "Одноразова Pod-система Elf Bar 1500 LUX STRAWBERRY ENERGY",
+    },
+    {
+        id: 11,
         img: "https://cdn.discordapp.com/attachments/980063993773314088/1137091008232960031/image.png",
         title: "Одноразова Pod-система Elf Bar 1500 LUX STRAWBERRY ENERGY",
     },
