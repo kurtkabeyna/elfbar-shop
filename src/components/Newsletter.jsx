@@ -1,9 +1,10 @@
 import SendIcon from '@mui/icons-material/Send';
 import styled from 'styled-components';
 import React from 'react';
+
 const Container = styled.div`
-height: 60vh;
-background-color: #fcf5f5;
+height: 45vh;
+background-color: #f5fcfb;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -19,13 +20,23 @@ font-weight: 300;
 margin-bottom: 20px;
 `;
 const InputContainer = styled.div`
-
+width: 50%;
+height: 40px;
+border-color: white;
+display: flex;
+justify-content: space-between;
+border:1px solid lightgrey;
 `;
 const Input = styled.input`
-
+border: none;
+flex:8;
+padding-left: 20px;;
 `;
 const Button = styled.button`
-
+flex:1;
+border:none;
+background-color: teal;
+color: white
 `;
 
 
