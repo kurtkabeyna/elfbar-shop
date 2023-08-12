@@ -5,7 +5,7 @@ import Announcement from "../components/Announcement"
 import Newsletter from "../components/Newsletter"
 import Products from "../components/Products"
 import Footer from "../components/Footer"
-
+import { mobile } from '../responsive'
 
 
 const Container = styled.div``;
@@ -15,6 +15,7 @@ margin: 20px;
 const FilterContainer = styled.div`
 display: flex;
 justify-content: space-between;
+${mobile({ marginLeft: "10px", marginTop: "70px", })}
 `;
 const Title = styled.h1`
 margin: 20px;

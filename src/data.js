@@ -41,6 +41,7 @@ export const products = [
         title: `Одноразова Pod-система 
                      Elf Bar 1500 
                     COCONUT MELON`,
+        type: 1500,
     },
     {
         id: 2,

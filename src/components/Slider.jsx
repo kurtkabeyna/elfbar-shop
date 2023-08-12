@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
 import { sliderItems } from "../data";
-
+import { mobile } from '../responsive';
 
 
 const Container = styled.div`
@@ -12,6 +12,7 @@ height: 60vh;
 display: flex;
 position: relative;
 overflow: hidden;
+${mobile({ display: "none" })}
 `
 
 const Arrow = styled.div`
@@ -66,7 +67,19 @@ padding: 50px;
 margin-bottom: 100px;
 margin-left: 300px;
 `;
-
+const Hr = styled.div`
+    display: block;
+    unicode-bidi: isolate;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    width: 100%;
+    ${mobile({ display: "none" })};
+    `;
 const Title = styled.h1`
 font-size: 70px;
 margin-bottom: 50px;
@@ -100,7 +113,7 @@ const Slider = () => {
     };
     return (
         <div>
-            < hr />
+            < Hr />
             <Container>
                 <Arrow direction="left" onClick={() => handleClick("left")}>
                     <ArrowLeftOutlinedIcon />
@@ -127,7 +140,7 @@ const Slider = () => {
                 </Arrow>
 
             </Container>
-            < hr />
+            < Hr />
         </div >
     )
 }

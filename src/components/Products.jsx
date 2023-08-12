@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { products } from "../data";
 import Product from './Product';
+import { mobile } from '../responsive'
+
 
 
 const Container = styled.div`
@@ -10,6 +12,8 @@ display: inline-block;
 padding: 20px;
 justify-content: space-between;
 align-items: center;
+
+${mobile({ marginLeft: "3px", marginTop: "50px", })}
 `
 
 const TitleProducts = styled.h1`
@@ -21,10 +25,11 @@ const TitleProducts = styled.h1`
     font-size: 64px;
     margin-left: 22%;
   margin-right: 38%;
+  ${mobile({ marginBottom: "50px", marginLeft: "130px", fontSize: "30px" })}
     
 `
 
-const Products = () => {
+const Products = ({ }) => {
     return (
         <Container>
             <TitleProducts>
