@@ -5,18 +5,19 @@ import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-// import { mobile } from "../responsive";
+import { mobile } from "../responsive";
 
 const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 20px;
-
+  ${mobile({ padding: "9px" })}
 `;
 
 const Title = styled.h1`
   font-weight: 300;
   text-align: center;
+  ${mobile({ marginTop: "70px", flexDirection: "column", padding: "15px" })}
 `;
 
 const Top = styled.div`
@@ -34,21 +35,23 @@ const TopButton = styled.button`
   background-color: ${(props) =>
     props.type === "filled" ? "black" : "transparent"};
   color: ${(props) => props.type === "filled" && "white"};
+  
 `;
 
 const TopTexts = styled.div`
-
+${mobile({ display: "none" })}
 `;
 const TopText = styled.span`
   text-decoration: underline;
   cursor: pointer;
   margin: 0px 10px;
+  ${mobile({ display: "none" })}
 `;
 
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
-
+  ${mobile({ flexDirection: "column" })}
 
 `;
 
@@ -59,7 +62,7 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
-
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const ProductDetail = styled.div`
@@ -89,7 +92,7 @@ const ProductColor = styled.div`
   background-color: ${(props) => props.color};
 `;
 
-const ProductSize = styled.span``;
+
 
 const PriceDetail = styled.div`
   flex: 1;
@@ -97,24 +100,35 @@ const PriceDetail = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 `;
 
 const ProductAmountContainer = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  
 `;
 
 const ProductAmount = styled.div`
   font-size: 24px;
   margin: 5px;
- 
+  width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  ${mobile({ margin: "5px 15px" })}
 `;
 
 const ProductPrice = styled.div`
   font-size: 30px;
   font-weight: 200;
- 
+  padding: 20px;
+  font-weight: bold;
+  ${mobile({ marginBottom: "2Opx" })}
 `;
 
 const Hr = styled.hr`
@@ -129,6 +143,7 @@ const Summary = styled.div`
   border-radius: 10px;
   padding: 20px;
   height: 50vh;
+  font-weight: bold;
 `;
 
 const SummaryTitle = styled.h1`
@@ -145,7 +160,8 @@ const SummaryItem = styled.div`
 
 const SummaryItemText = styled.span``;
 
-const SummaryItemPrice = styled.span``;
+const SummaryItemPrice = styled.span`
+font-weight: bold;`;
 
 const Button = styled.button`
   width: 100%;
@@ -174,51 +190,47 @@ const Cart = () => {
           <Info>
             <Product>
               <ProductDetail>
-                <Image src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614188818-TD1MTHU_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHERS_THUNDER_b01b1013-cd8d-48e7-bed9-52db26515dc4.png?crop=1xw:1.00xh;center,top&resize=480%3A%2A" />
+                <Image src="https://media.discordapp.net/attachments/980063993773314088/1140216779050860614/Kategorie_Elf_Bar_600_20mg_ml_-_Neue_Sorten-_ELFBAR_VAPES_EU.jpeg" />
                 <Details>
                   <ProductName>
-                    <b>Product:</b> JESSIE THUNDER SHOES
+                    <b>Product:</b> ELFBAR 600 CHERRY
                   </ProductName>
                   <ProductId>
                     <b>ID:</b> 93813718293
                   </ProductId>
-                  <ProductColor color="black" />
-                  <ProductSize>
-                    <b>Size:</b> 37.5
-                  </ProductSize>
+                  <ProductColor color="#D2042D" />
+
                 </Details>
               </ProductDetail>
               <PriceDetail>
                 <ProductAmountContainer>
-                  <AddIcon />
-                  <ProductAmount>2</ProductAmount>
                   <RemoveIcon />
+                  <ProductAmount>2</ProductAmount>
+                  <AddIcon />
                 </ProductAmountContainer>
-                <ProductPrice>$ 30</ProductPrice>
+                <ProductPrice>$ 18</ProductPrice>
               </PriceDetail>
             </Product>
             <Hr />
             <Product>
               <ProductDetail>
-                <Image src="https://i.pinimg.com/originals/2d/af/f8/2daff8e0823e51dd752704a47d5b795c.png" />
+                <Image src="https://media.discordapp.net/attachments/980063993773314088/1140217140683755560/Kategorie_Elf_Bar_600_20mg_ml_-_Neue_Sorten-_ELFBAR_VAPES_EU_2.jpeg" />
                 <Details>
                   <ProductName>
-                    <b>Product:</b> HAKURA T-SHIRT
+                    <b>Product:</b> ELFBAR 600 STRAWBERRY ICE CREAM
                   </ProductName>
                   <ProductId>
                     <b>ID:</b> 93813718293
                   </ProductId>
-                  <ProductColor color="gray" />
-                  <ProductSize>
-                    <b>Size:</b> M
-                  </ProductSize>
+                  <ProductColor color="pink" />
+
                 </Details>
               </ProductDetail>
               <PriceDetail>
                 <ProductAmountContainer>
-                  <AddIcon />
-                  <ProductAmount>1</ProductAmount>
                   <RemoveIcon />
+                  <ProductAmount>1</ProductAmount>
+                  <AddIcon />
                 </ProductAmountContainer>
                 <ProductPrice>$ 20</ProductPrice>
               </PriceDetail>

@@ -97,10 +97,10 @@ padding: 4px;
   }
 `
 const IconFav = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background-color: white;
+  
   display: flex;
   align-items: center;
   justify-content: center;
