@@ -1,4 +1,4 @@
-can't understand how images work
+can't understand how  do images work
 and how them add
 
 # elfbar-shop
